@@ -78,7 +78,7 @@ Future<void> _verificacion_web() async {
   QuerySnapshot<Map<String, dynamic>> snapshot =await instance.collection("my_doc").get();
 */
 }
-
+//
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   var _partida_selec = Buscarpartida(
