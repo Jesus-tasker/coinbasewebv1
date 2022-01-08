@@ -92,6 +92,46 @@ class Ususario_Provider {
     }
   }
 
+  //--
+  Future traerlistamongodb() async {
+    var headers = {'Content-Type': 'application/json'};
+    /*   var request =http.Request('POST', Uri.parse('localhost:3000/read_type_violencia'));
+    request.body = json.encode({
+      "token":
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWI1MDIyNmYwMTEzZWU1YzZhZGZiNDAiLCJlbWFpbCI6Im5lbHNvbiIsImlhdCI6MTYzOTI1Mjk5N30.-sqNF6mk0WjZEV33b9655U8UfhAs3V7tuNbIEDvTOlQ"
+    });
+    request.headers.addAll(headers);*/
+    final authdata = {
+      "token":
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWI1MDIyNmYwMTEzZWU1YzZhZGZiNDAiLCJlbWFpbCI6Im5lbHNvbiIsImlhdCI6MTYzOTI1Mjk5N30.-sqNF6mk0WjZEV33b9655U8UfhAs3V7tuNbIEDvTOlQ"
+    };
+    final Uri url_endpoint_auth =
+        Uri.parse('localhost:3000/read_type_violencia');
+
+    final respuesta =
+        await http.post(url_endpoint_auth, body: json.encode(authdata));
+
+    Map<String, dynamic> decodeRespuesta = json.decode(respuesta.body);
+    if (decodeRespuesta.containsKey('localId')) {
+//sobreescribir el tokken en sharen preferences
+      _pref_shared.token = decodeRespuesta['localId'];
+
+      return {
+        'ok': true,
+        'mensaje': decodeRespuesta['localId']
+      }; //ruta json con el idtokken
+    } else {
+      //error ej email ya usado
+      return {
+        'ok': false,
+        'mensaje': decodeRespuesta['error']['message']
+      }; //ruta con el error json
+      //
+
+    }
+  }
+  //--
+
   Future<String> getuid2() async {
     final tokenResult = _auth.currentUser;
     final idToken = await tokenResult;
