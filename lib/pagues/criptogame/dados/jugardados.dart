@@ -10,7 +10,7 @@ import 'package:criptodadosweb/utils/utils_textos.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_xlider/flutter_xlider.dart';
+//import 'package:flutter_xlider/flutter_xlider.dart';
 
 //para entrar en la partida
 List<Jugadoreson> player = [];

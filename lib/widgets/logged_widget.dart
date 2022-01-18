@@ -58,7 +58,9 @@ class Loggesd_widget extends StatelessWidget {
     print("..................................token");
     print(_pref_user.token);
 
-    Navigator.pushNamed(context, 'perfil_user'); //(context, 'perfil_user');
+    // Navigator.pushNamed(context, 'perfil_user'); //(context, 'perfil_user');
+    //cambiado
+    Navigator.pushNamed(context, 'navegador');
   }
 
 //NO

@@ -6,10 +6,17 @@ import 'package:criptodadosweb/pagues/menuinicio.dart';
 import 'package:criptodadosweb/pagues/models/buscarpartida.dart';
 import 'package:criptodadosweb/pagues/models/pagos_bakcend/comprasmodel.dart';
 import 'package:criptodadosweb/pagues/pagos_criptos/pagarcriptos.dart';
+import 'package:criptodadosweb/routesweb/router_generationweb.dart';
 //import 'package:criptodadosweb/pagues/login/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+
+import 'loginweb/intento2/authdialog.dart';
+
+//
+//import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+//import 'package:url_strategy/url_strategy.dart';
 
 //void main() => runApp(MyApp());
 /*void main() async {
@@ -42,6 +49,8 @@ void main() async {
         messagingSenderId: "591288686983",
         projectId: "criptocoin-6e89c"),
   );*/
+  // setPathUrlStrategy();
+
   runApp(MyApp());
 }
 
@@ -78,10 +87,11 @@ Future<void> _verificacion_web() async {
   QuerySnapshot<Map<String, dynamic>> snapshot =await instance.collection("my_doc").get();
 */
 }
+
 //
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  var _partida_selec = Buscarpartida(
+  final _partida_selec = Buscarpartida(
       numero: "numero",
       timestamp: "timestamp",
       nombre: "nombre",
@@ -90,9 +100,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: AuthService().handleAuth(),
-        routes: {
+      debugShowCheckedModeBanner: false,
+      home: AuthService().handleAuth(), // AuthDialogweb(),
+      onGenerateRoute: RouterGeneration
+          .generarruta, //con esto ya no necesitamos las rutas rradicionales
+      /* routes: {
           //login
           'playdados': (BuildContext context) => Jugardados(_partida_selec),
           //login
@@ -102,12 +114,15 @@ class MyApp extends StatelessWidget {
           'navegador': (BuildContext context) =>
               Menuinicio(), //puse navegador para que fuera mas sencillo los cambios
           //cointspay
-          'coinbase': (BuildContext context) => pagarcriptos(new Comprasmodel(
+          'coinbase': (BuildContext context) => pagarcriptos(Comprasmodel(
               moneda_name: "moneda_name",
               rutaimagen: "rutaimagen",
               cantidad: 00,
               prefio: "")),
-        });
+        }*/
+    );
+    //RUTAS PARA LA WEB CURSO FERNANDO HERRERA VIDEO 18
+
     //  debugShowCheckedModeBanner: false,home: LoginPage());
     //  debugShowCheckedModeBanner: false,home: Container(child: Text("ASDFASDF"),));
   }

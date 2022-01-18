@@ -1,4 +1,4 @@
-import 'package:criptodadosweb/pagues/models/materias_elegir.dart';
+/*import 'package:criptodadosweb/pagues/models/materias_elegir.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -130,3 +130,4 @@ class Card_swipeer extends StatelessWidget {
     );
   }
 }
+*/

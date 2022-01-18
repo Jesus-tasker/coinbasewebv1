@@ -21,8 +21,9 @@ class _AuthDialogwebState extends State<AuthDialogweb> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text("Bienbenidos a criptodados por favor inicie cesion "),
-                Text("Apta solo par mayores de 18 años y profesionales  "),
+                Text("Bienvenidos a Criptodados por favor inicie cesión"),
+                Text(
+                    "Apta solo para mayores de 18 años y amantes  de la revolucion digital cripto  "),
 
                 //  Text('Email address'),
                 // _crearEmail(),

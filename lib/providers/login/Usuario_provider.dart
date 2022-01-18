@@ -112,7 +112,7 @@ class Ususario_Provider {
         await http.post(url_endpoint_auth, body: json.encode(authdata));
 
     Map<String, dynamic> decodeRespuesta = json.decode(respuesta.body);
-    if (decodeRespuesta.containsKey('localId')) {
+    if (decodeRespuesta.containsKey('datos')) {
 //sobreescribir el tokken en sharen preferences
       _pref_shared.token = decodeRespuesta['localId'];
 

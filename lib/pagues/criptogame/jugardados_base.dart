@@ -1,6 +1,6 @@
 import 'package:criptodadosweb/utils/utils_textos.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_xlider/flutter_xlider.dart';
+//import 'package:flutter_xlider/flutter_xlider.dart';
 
 //base vacia para su cambios
 class Jugardados extends StatefulWidget {

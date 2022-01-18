@@ -1,11 +1,15 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:criptodadosweb/pagues/menuinicio.dart';
 import 'package:criptodadosweb/pagues/models/usuario_model.dart';
 import 'package:criptodadosweb/preferencias_usuario/preferences_user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class Provider_PerfilUsuario {
@@ -50,7 +54,19 @@ class Provider_PerfilUsuario {
                 // ignore: avoid_print
                 print("usuario ctualizado"),
                 print(usuario.toJson()),
-                Navigator.pushReplacementNamed(context, 'navegador'),
+                Navigator.pushNamed(context, 'navegador'), //copia de prueba
+                // Navigator.pushNamedAndRemoveUntil(context, 'navegador', (route) => false),
+                //Navigator.pushReplacementNamed(context, 'navegador'), //original
+                // Navigator.pushReplacementNamed(context, 'menuiniciov2'), //original
+                // Navigator.pushNamed(context, 'menuiniciov3'),
+                //otra forma
+                /* Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                      fullscreenDialog: true,
+                      builder: (context) =>
+                          Menuinicio() // Perfil_Usuario() //HomePageweb,
+                      ),
+                ),*/
               })
 
           // ignore: invalid_return_type_for_catch_error

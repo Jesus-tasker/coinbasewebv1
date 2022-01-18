@@ -1,21 +1,4 @@
-//import 'package:audioplayers/audioplayers.dart';
-//import 'package:cache_audio_player/cache_audio_player.dart';
-//import 'package:flutter/material.dart';
-//import 'package:audioplayers/audioplayers.dart;';
-
 /*
-sonido1() async {
-  AudioCache player = AudioCache(prefix: 'assets/');
-
-  // super.initState();
-  player = AudioCache(
-      prefix: 'assets/yes.mp3',
-      fixedPlayer: AudioPlayer()..setReleaseMode(ReleaseMode.STOP));
-}
-*/
-
-//funciona para .mp3 on line
-
 //este funciona en app
 import 'package:cache_audio_player/cache_audio_player.dart';
 
@@ -69,3 +52,4 @@ playLocalAsset() async {
 
   // return await cache.play("yes.mp3");
 }
+*/
