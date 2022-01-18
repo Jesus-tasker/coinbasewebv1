@@ -11,7 +11,7 @@ class _Menuiniciov3State extends State<Menuiniciov3> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("hola putos "),
+      child: Text("hola putos  esta es el v3"),
     );
   }
 }

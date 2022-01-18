@@ -39,7 +39,7 @@ class _Menuiniciov2State extends State<Menuiniciov2> {
 
   @override
   Widget build(BuildContext context) {
-    var original = MaterialApp(
+    return MaterialApp(
       showSemanticsDebugger: false,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -73,7 +73,6 @@ class _Menuiniciov2State extends State<Menuiniciov2> {
             )),
       ),
     );
-    return Container(child: Text("pagina nueva "));
   }
 
   final _prefusers = PreferenciasUsuario();
